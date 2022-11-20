@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{9868D141-52D4-4392-9447-70CC0BC701B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senet", "app\Senet\Senet.csproj", "{DDF5E94A-9101-4660-A26A-30FF65074025}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDF5E94A-9101-4660-A26A-30FF65074025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDF5E94A-9101-4660-A26A-30FF65074025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDF5E94A-9101-4660-A26A-30FF65074025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDF5E94A-9101-4660-A26A-30FF65074025}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DDF5E94A-9101-4660-A26A-30FF65074025} = {9868D141-52D4-4392-9447-70CC0BC701B0}
+	EndGlobalSection
+EndGlobal
