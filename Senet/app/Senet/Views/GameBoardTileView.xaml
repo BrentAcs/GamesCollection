@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Senet.Views.GameBoardTileView">
+   <Grid x:Name="BoardTile"
+         BackgroundColor="SandyBrown"
+         WidthRequest="128"
+         HeightRequest="128"
+         ColumnDefinitions="20,*,20"
+         RowDefinitions="20,*,20"
+   >
+      <Label x:Name="IndexLabel"
+             Grid.Column="0"
+             Grid.Row="0"
+             TextColor="Black"
+             Text="1"/>
+      <Image x:Name="PieceImage"
+             Grid.Column="1"
+             Grid.Row="1" 
+             Source="senet_green.png"/>
+      <Label x:Name="CaptionLabel"
+             Grid.Column="0"
+             Grid.Row="2"
+             Grid.ColumnSpan="3"
+             HorizontalOptions="Center"
+             FontAttributes="Bold"
+             TextColor="Black"
+             Text="House"/>
+   </Grid>
+</ContentView>

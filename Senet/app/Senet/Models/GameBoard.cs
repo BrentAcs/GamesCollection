@@ -21,46 +21,7 @@ public class GameBoard : BindableObject
    {
       for (int i = 0; i < TileCount; i++)
       {
-         _boardTiles[ i ] = new GameBoardTile {Moniker = i + 1};
-      }
-   }
-}
-
-public class GameBoardTile : BindableObject
-{
-   private int _moniker;
-
-   public GameBoardTile()
-   {
-   }
-
-   public int GridX
-   {
-      get
-      {
-         var result = (Moniker - 1) % 10;
-         System.Diagnostics.Debug.WriteLine($"Moniker: {Moniker}, GridX: {result}");
-         return result;
-      }
-   }
-
-   public int GridY
-   {
-      get
-      {
-         var result = (Moniker - 1) / 10;
-         System.Diagnostics.Debug.WriteLine($"Moniker: {Moniker}, GridY: {result}");
-         return result;
-      }
-   }
-
-   public int Moniker
-   {
-      get => _moniker;
-      set
-      {
-         _moniker = value;
-         OnPropertyChanged();
+         _boardTiles[ i ] = new GameBoardTile {Index = i};
       }
    }
 }

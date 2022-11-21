@@ -2,72 +2,111 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:Senet.Models"
-             xmlns:viewModels="clr-namespace:Senet.ViewModels"
+             xmlns:views="clr-namespace:Senet.Views"
              x:Class="Senet.MainPage">
+   <VerticalStackLayout>
+      <!--<Grid x:Name="BoardTile"
+            BackgroundColor="SandyBrown"
+            WidthRequest="128"
+            HeightRequest="128"
+            ColumnDefinitions="20,*,20"
+            RowDefinitions="20,*,20"
+            >
+         <Label Grid.Column="0"
+                Grid.Row="0"
+                TextColor="Black"
+                Text="1"/>
+         <Image Grid.Column="1"
+                Grid.Row="1" 
+                Source="senet_green.png"/>
+         <Label Grid.Column="0"
+                Grid.Row="2"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                TextColor="Black"
+                Text="House"/>
+      </Grid>
+      <Grid x:Name="BoardTile2"
+            BackgroundColor="LightYellow"
+            WidthRequest="128"
+            HeightRequest="128"
+            ColumnDefinitions="20,*,20"
+            RowDefinitions="20,*,20"
+      >
+         <Label Grid.Column="0"
+                Grid.Row="0"
+                TextColor="Black"
+                Text="10"/>
+         <Image Grid.Column="1"
+                Grid.Row="1" 
+                Source="senet_green.png"/>
+         <Label Grid.Column="0"
+                Grid.Row="2"
+                Grid.ColumnSpan="3"
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                TextColor="Black"
+                Text="House"/>
+      </Grid>-->
 
-   <!-- x:DataType="viewModels:GameBoardViewModel" -->
+<!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+         </Grid.ColumnDefinitions>
+         <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="32" />
+         </Grid.RowDefinitions>-->
 
-   <ContentPage.BindingContext>
-      <viewModels:GameBoardViewModel/>
-   </ContentPage.BindingContext>
+      
 
-   <Grid>
-      <Grid.ColumnDefinitions>
-         <ColumnDefinition Width="*" />
-      </Grid.ColumnDefinitions>
-      <Grid.RowDefinitions>
-         <RowDefinition Height="32" />
-         <RowDefinition Height="*" />
-         <RowDefinition Height="32" />
-      </Grid.RowDefinitions>
+      <Grid>
+         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+         </Grid.ColumnDefinitions>
+         <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="32" />
+         </Grid.RowDefinitions>
 
-      <Label Text="SENET"
+         <Label Text="SENET"
              HorizontalOptions="Center"
              Grid.Column="0"
              Grid.Row="0" />
 
-      <Label Text="{Binding Tiles.Count}"
-             HorizontalOptions="Center"
-             BackgroundColor="Lime"
-             TextColor="Black"
-             Grid.Column="0"
-             Grid.Row="2" />
+         <Button Grid.Column="0"
+              Grid.Row="2"
+              HorizontalOptions="Center"
+              Text="Test it!"
+              Clicked="Button_OnClicked"
+              />
 
-      <CollectionView Grid.Column="0"
-                      Grid.Row="1"
-                      ItemsSource="{Binding Tiles}">
-         <CollectionView.ItemTemplate>
-            <DataTemplate>
-               <Grid x:DataType="models:GameBoardTile">
-                  <Grid.ColumnDefinitions>
-                     <ColumnDefinition Width="32" />
-                     <ColumnDefinition Width="32" />
-                     <ColumnDefinition Width="32" />
-                     <ColumnDefinition Width="32" />
-                     <ColumnDefinition Width="32" />
-                     <ColumnDefinition Width="32" />
-                     <ColumnDefinition Width="32" />
-                     <ColumnDefinition Width="32" />
-                     <ColumnDefinition Width="32" />
-                     <ColumnDefinition Width="32" />
-                  </Grid.ColumnDefinitions>
-                  <Grid.RowDefinitions>
-                     <RowDefinition Height="32" />
-                     <RowDefinition Height="32" />
-                     <RowDefinition Height="32" />
-                  </Grid.RowDefinitions>
-                  
-                  <ContentView Grid.Column="{Binding GridX}"
-                               Grid.Row="{Binding GridY}">
-                     <Label Text="{Binding Moniker}" />
-                  </ContentView>
-                  
-               </Grid>
-            </DataTemplate>
-         </CollectionView.ItemTemplate>
-      </CollectionView>
-
-   </Grid>
+         <Grid x:Name="BoardGrid"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Grid.Column="0"
+            Grid.Row="1">
+            <Grid.ColumnDefinitions>
+               <ColumnDefinition Width="128" />
+               <ColumnDefinition Width="128" />
+               <ColumnDefinition Width="128" />
+               <ColumnDefinition Width="128" />
+               <ColumnDefinition Width="128" />
+               <ColumnDefinition Width="128" />
+               <ColumnDefinition Width="128" />
+               <ColumnDefinition Width="128" />
+               <ColumnDefinition Width="128" />
+               <ColumnDefinition Width="128" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+               <RowDefinition Height="128" />
+               <RowDefinition Height="128" />
+               <RowDefinition Height="128" />
+            </Grid.RowDefinitions>
+         </Grid>
+      </Grid>
+   </VerticalStackLayout>
 
 </ContentPage>

@@ -1,22 +1,61 @@
-﻿using Senet.ViewModels;
+﻿using Microsoft.Maui.Controls.Compatibility;
+using Senet.ViewModels;
+using Senet.Views;
 
 namespace Senet;
 
 public partial class MainPage : ContentPage
 {
-   public MainPage(GameBoardViewModel viewModel)
+   private readonly GameBoardViewModel _boardViewModel;
+
+   public MainPage(GameBoardViewModel boardViewModel)
    {
+      _boardViewModel = boardViewModel;
       InitializeComponent();
-      // BindingContext = viewModel;
    }
 
    protected override void OnAppearing()
    {
       base.OnAppearing();
 
-      if (BindingContext is GameBoardViewModel)
+      foreach (var tile in _boardViewModel.Tiles)
       {
-         (BindingContext as GameBoardViewModel)!.InitializeAsync();
+         // var label = new Label
+         // {
+         //    BindingContext = tile,
+         //    BackgroundColor = tile.BackgroundColor,
+         //    TextColor = Colors.Black
+         // };
+         // label.SetBinding(Label.TextProperty, "Index");
+         //
+         // var image = new Image
+         // {
+         //    HeightRequest = 32,
+         //    WidthRequest = 32,
+         //    Source = ImageSource.FromFile("dotnet_bot.png"),
+         //    ZIndex = 1
+         // };
+         //
+         // var content = new HorizontalStackLayout()
+         // {
+         //    Padding = 4,
+         //    //Content = label
+         // };
+         // content.Children.Add(label);
+         // content.Children.Add(image);
+         var content = new GameBoardTileView
+         {
+            TileIndex = $"{tile.Index}",
+            BackgroundColor = tile.BackgroundColor,
+            Caption = tile.Caption
+         };
+
+         BoardGrid.Add(content, tile.GridX,tile.GridY );
       }
+   }
+
+   private void Button_OnClicked(object sender, EventArgs e)
+   {
+      _boardViewModel.Tiles[ 1 ].Name = "BIGGER";
    }
 }
