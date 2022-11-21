@@ -1,6 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Senet.Models"
+             xmlns:viewModels="clr-namespace:Senet.ViewModels"
+             x:DataType="viewModels:GameBoardViewModel"
              x:Class="Senet.MainPage">
 
    <Grid>
@@ -8,16 +12,35 @@
          <ColumnDefinition Width="*" />
       </Grid.ColumnDefinitions>
       <Grid.RowDefinitions>
-         <RowDefinition Height="32"/>
-         <RowDefinition Height="*"/>
-         <RowDefinition Height="32"/>
+         <RowDefinition Height="32" />
+         <RowDefinition Height="*" />
+         <RowDefinition Height="32" />
       </Grid.RowDefinitions>
-      
+
       <Label Text="SENET"
              HorizontalOptions="Center"
-             Grid.Column="1"
-             Grid.Row="1"/>
+             Grid.Column="0"
+             Grid.Row="0" />
       
+      <Label Text="{Binding Tiles.Count}"
+             HorizontalOptions="Center"
+             Grid.Column="0"
+             Grid.Row="2" />
+
+      <CollectionView Grid.Column="0"
+                      Grid.Row="1"
+                      ItemsSource="{Binding Tiles}">
+         <CollectionView.ItemTemplate>
+            <DataTemplate>
+               
+               
+               <!-- <Label Text="{Binding Moniker}"></Label> -->
+
+               
+            </DataTemplate>
+         </CollectionView.ItemTemplate>
+      </CollectionView>
+
    </Grid>
 
 </ContentPage>

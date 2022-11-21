@@ -12,11 +12,21 @@ public class GameBoard : BindableObject
       set => SetTile(index, value);
    }
 
+   public IEnumerable<GameBoardTile> Tiles => _tiles; 
+
    public GameBoardTile GetTile(int index) => _tiles[ index ];
    public void SetTile(int index, GameBoardTile tile) => _tiles[ index ] = tile;
+
+   public void Reset()
+   {
+      for (int i = 0; i < TileCount; i++)
+      {
+         _tiles[ i ] = new GameBoardTile {Moniker = i + 1};
+      }
+   }
 }
 
 public class GameBoardTile : BindableObject
 {
-   public int Index { get; private set; }
+   public int Moniker { get; set; }
 }

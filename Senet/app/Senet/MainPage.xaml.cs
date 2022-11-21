@@ -1,11 +1,12 @@
-﻿namespace Senet;
+﻿using Senet.ViewModels;
+
+namespace Senet;
 
 public partial class MainPage : ContentPage
 {
-   int count = 0;
-
-   public MainPage()
+   public MainPage(GameBoardViewModel viewModel)
    {
+      BindingContext = viewModel;
       InitializeComponent();
    }
 }
