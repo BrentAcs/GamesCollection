@@ -1,5 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Senet.Collections;
+﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Senet.Models;
 
 namespace Senet.ViewModels;
@@ -10,13 +10,15 @@ public class GameBoardViewModel : ObservableObject
    
    public GameBoardViewModel()
    {
+      _board.Reset();
+      Tiles = new ObservableCollection<GameBoardTile>(_board.BoardTiles);
    }
 
-   public ObservableCollectionEx<GameBoardTile> Tiles { get; private set; } 
+   public ObservableCollection<GameBoardTile> Tiles { get; private set; } 
 
    public async Task InitializeAsync()
    {
       _board.Reset();
-      Tiles = new ObservableCollectionEx<GameBoardTile>(_board.Tiles);
+      Tiles = new ObservableCollection<GameBoardTile>(_board.BoardTiles);
    }
 }

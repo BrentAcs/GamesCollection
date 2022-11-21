@@ -1,24 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33103.201
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Senet", "Senet", "{546518B3-29D8-426B-A6BA-12E1E75E0C7D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{9D675353-C9DA-483C-B23E-92BA60602F2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senet", "Senet\app\Senet\Senet.csproj", "{017B8964-1AB8-4ACD-B2C4-343EC20116D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Senet", "Senet\app\Senet\Senet.csproj", "{017B8964-1AB8-4ACD-B2C4-343EC20116D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{9D675353-C9DA-483C-B23E-92BA60602F2B} = {546518B3-29D8-426B-A6BA-12E1E75E0C7D}
-		{017B8964-1AB8-4ACD-B2C4-343EC20116D2} = {9D675353-C9DA-483C-B23E-92BA60602F2B}
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{017B8964-1AB8-4ACD-B2C4-343EC20116D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{017B8964-1AB8-4ACD-B2C4-343EC20116D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{017B8964-1AB8-4ACD-B2C4-343EC20116D2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{017B8964-1AB8-4ACD-B2C4-343EC20116D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{017B8964-1AB8-4ACD-B2C4-343EC20116D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9D675353-C9DA-483C-B23E-92BA60602F2B} = {546518B3-29D8-426B-A6BA-12E1E75E0C7D}
+		{017B8964-1AB8-4ACD-B2C4-343EC20116D2} = {9D675353-C9DA-483C-B23E-92BA60602F2B}
 	EndGlobalSection
 EndGlobal

@@ -2,10 +2,15 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="clr-namespace:Senet.Models"
+             xmlns:models="clr-namespace:Senet.Models"
              xmlns:viewModels="clr-namespace:Senet.ViewModels"
-             x:DataType="viewModels:GameBoardViewModel"
              x:Class="Senet.MainPage">
+
+   <!-- x:DataType="viewModels:GameBoardViewModel" -->
+
+   <ContentPage.BindingContext>
+      <viewModels:GameBoardViewModel/>
+   </ContentPage.BindingContext>
 
    <Grid>
       <Grid.ColumnDefinitions>
@@ -21,9 +26,11 @@
              HorizontalOptions="Center"
              Grid.Column="0"
              Grid.Row="0" />
-      
+
       <Label Text="{Binding Tiles.Count}"
              HorizontalOptions="Center"
+             BackgroundColor="Lime"
+             TextColor="Black"
              Grid.Column="0"
              Grid.Row="2" />
 
@@ -32,11 +39,31 @@
                       ItemsSource="{Binding Tiles}">
          <CollectionView.ItemTemplate>
             <DataTemplate>
-               
-               
-               <!-- <Label Text="{Binding Moniker}"></Label> -->
-
-               
+               <Grid x:DataType="models:GameBoardTile">
+                  <Grid.ColumnDefinitions>
+                     <ColumnDefinition Width="32" />
+                     <ColumnDefinition Width="32" />
+                     <ColumnDefinition Width="32" />
+                     <ColumnDefinition Width="32" />
+                     <ColumnDefinition Width="32" />
+                     <ColumnDefinition Width="32" />
+                     <ColumnDefinition Width="32" />
+                     <ColumnDefinition Width="32" />
+                     <ColumnDefinition Width="32" />
+                     <ColumnDefinition Width="32" />
+                  </Grid.ColumnDefinitions>
+                  <Grid.RowDefinitions>
+                     <RowDefinition Height="32" />
+                     <RowDefinition Height="32" />
+                     <RowDefinition Height="32" />
+                  </Grid.RowDefinitions>
+                  
+                  <ContentView Grid.Column="{Binding GridX}"
+                               Grid.Row="{Binding GridY}">
+                     <Label Text="{Binding Moniker}" />
+                  </ContentView>
+                  
+               </Grid>
             </DataTemplate>
          </CollectionView.ItemTemplate>
       </CollectionView>
