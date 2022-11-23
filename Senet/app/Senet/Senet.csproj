@@ -59,10 +59,19 @@
      <MauiXaml Update="Views\Children\PlanetarySystemInfoView.xaml">
        <Generator>MSBuild:Compile</Generator>
      </MauiXaml>
+     <MauiXaml Update="Views\Children\SatelliteSystemHeaderView.xaml">
+       <Generator>MSBuild:Compile</Generator>
+     </MauiXaml>
+     <MauiXaml Update="Views\Children\SatelliteSystemInfoView.xaml">
+       <Generator>MSBuild:Compile</Generator>
+     </MauiXaml>
+     <MauiXaml Update="Views\Controls\DataWithLabel.xaml">
+       <Generator>MSBuild:Compile</Generator>
+     </MauiXaml>
      <MauiXaml Update="Views\GameBoardTileView.xaml">
        <Generator>MSBuild:Compile</Generator>
      </MauiXaml>
-     <MauiXaml Update="Views\Templates\PlanetarySystemHeaderView.xaml">
+     <MauiXaml Update="Views\Children\PlanetarySystemHeaderView.xaml">
        <Generator>MSBuild:Compile</Generator>
      </MauiXaml>
      <MauiXaml Update="Views\UITestBed.xaml">

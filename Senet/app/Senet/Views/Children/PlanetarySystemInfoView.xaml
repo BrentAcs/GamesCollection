@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:templates="clr-namespace:Senet.Views.Templates"
+             xmlns:children="clr-namespace:Senet.Views.Children"
              x:Class="Senet.Views.Children.PlanetarySystemInfoView">
    <Frame BorderColor="LightGreen"
           CornerRadius="0"
@@ -10,10 +10,13 @@
       <Grid ColumnDefinitions="*"
             RowDefinitions="42,Auto,Auto">
 
-         <templates:PlanetarySystemHeaderView Grid.Column="0"
+         <children:PlanetarySystemHeaderView Grid.Column="0"
                                               Grid.Row="0"/>
 
-         <StackLayout Grid.Column="0"
+         <children:SatelliteSystemInfoView Grid.Column="0"
+                                           Grid.Row="1"/>
+
+         <!--<StackLayout Grid.Column="0"
                       Grid.Row="1">
             <HorizontalStackLayout Padding="8,0,0,0">
                <Label x:Name="PlanetsExpandLabel"
@@ -29,39 +32,9 @@
                       TextColor="LightBlue"/>
             </HorizontalStackLayout>
 
-            <StackLayout Padding="32,0,0,0">
-               <Label Text="Satellite System Info"
-                      FontAttributes="Bold"
-                      TextColor="LightBlue"/>
+            <children:SatelliteSystemHeaderView />
 
-               <HorizontalStackLayout BackgroundColor="Black">
-                  <Label Text="Name:" 
-                         Padding="0,0,4,0"/>
-                  <Label Text="Planet 1" 
-                         TextColor="Yellow" 
-                         WidthRequest="96"/>
-                  <Label Text="Planet:" 
-                         Padding="0,0,4,0"/>
-                  <Label Text="Barren" 
-                         TextColor="Yellow" 
-                         WidthRequest="96"/>
-                  <Label Text="Distance:" 
-                         Padding="0,0,4,0"/>
-                  <Label Text=".74 AU" 
-                         TextColor="Green" 
-                         WidthRequest="96"/>
-                  <Label Text="Diameter:" 
-                         Padding="0,0,4,0"/>
-                  <Label Text="34.1 km" 
-                         TextColor="Green" 
-                         WidthRequest="96"/>
-
-               </HorizontalStackLayout>
-
-            </StackLayout>
-
-
-         </StackLayout>
+         </StackLayout>-->
 
          <StackLayout Grid.Column="0"
                       Grid.Row="2">

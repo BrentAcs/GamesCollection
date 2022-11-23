@@ -1,4 +1,4 @@
-namespace Senet.Views.Templates;
+﻿namespace Senet.Views.Children;
 
 public partial class PlanetarySystemHeaderView : ContentView
 {

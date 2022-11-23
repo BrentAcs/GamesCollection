@@ -1,37 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Senet.Views.Templates.PlanetarySystemHeaderView">
-
-   <StackLayout>
-      <Label Text="Planetary System Info"
+             x:Class="Senet.Views.Children.SatelliteSystemHeaderView">
+   <StackLayout Padding="32,0,0,0">
+      <!--<Label Text="Satellite System Info"
              FontAttributes="Bold"
-             TextColor="LightBlue"/>
-
+             TextColor="LightBlue"/>-->
       <HorizontalStackLayout BackgroundColor="Black">
          <Label Text="Name:" 
                 Padding="0,0,4,0"/>
-         <Label Text="KBP-123" 
+         <Label Text="Planet 1" 
                 TextColor="Yellow" 
                 WidthRequest="96"/>
-         <Label Text="Star:" 
+         <Label Text="Planet:" 
                 Padding="0,0,4,0"/>
-         <Label Text="Red-Dwarf" 
+         <Label Text="Barren" 
                 TextColor="Yellow" 
                 WidthRequest="96"/>
-         <Label Text="Location:" 
+         <Label Text="Distance:" 
                 Padding="0,0,4,0"/>
-         <Label Text="[ 10,10,10 ]" 
+         <Label Text=".74 AU" 
                 TextColor="Green" 
                 WidthRequest="96"/>
          <Label Text="Diameter:" 
                 Padding="0,0,4,0"/>
-         <Label Text="100 AU" 
+         <Label Text="34.1 km" 
                 TextColor="Green" 
                 WidthRequest="96"/>
-
       </HorizontalStackLayout>
-
    </StackLayout>
-
 </ContentView>

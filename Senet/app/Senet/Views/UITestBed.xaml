@@ -1,56 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:templates="clr-namespace:Senet.Views.Templates"
              xmlns:children="clr-namespace:Senet.Views.Children"
+             xmlns:controls="clr-namespace:Senet.Views.Controls"
              x:Class="Senet.Views.UITestBed"
              Title="UITestBed">
+   <ContentPage.Resources>
+      <ControlTemplate x:Key="ControlTemplate">
+         <controls:DataWithLabel/>
+      </ControlTemplate>
+   </ContentPage.Resources>
 
-   <children:PlanetarySystemInfoView />
+   <!--<children:PlanetarySystemInfoView />-->
+
+   <Grid ColumnDefinitions="*"
+         RowDefinitions="Auto,*">
+
+
+      <Frame BorderColor="Yellow"
+             Padding="4">
+         <controls:DataWithLabel 
+            />
+
+         <!--<HorizontalStackLayout>
+            <Label Text="Moon:"
+                   FontAttributes="Bold"
+                   Padding="0,0,4,0"/>
+            <Label Text="XXX-YYY.1.1"/>
+
+         </HorizontalStackLayout>-->
+      </Frame>
+
+
+   </Grid>
 
 </ContentPage>
-
-
-<!--<Frame Grid.Column="0"
-             Grid.Row="2"
-             BackgroundColor="DarkGray">
-         <Label Text="Boobs!"></Label>
-      </Frame>-->
-
-<!-- 
-      Name
-      Location
-      Distance
-      Planet
-      ** Moons
-      ** Stations
-      -->
-
-<!--<Grid x:Name="SatelliteSystemsTable"
-            Grid.Column="0"
-            Grid.Row="1"
-            ColumnDefinitions="*"
-            RowDefinitions="24,*,*">
-         <HorizontalStackLayout Grid.Column="0"
-                                Grid.Row="0"
-                                Grid.ColumnSpan="2"
-                                BackgroundColor="Black">
-            <Label x:Name="CollapseSatelliteSystemsLabel"
-                   Text="[+]" 
-                   TextColor="White"
-                   WidthRequest="20"/>
-            <Label Text="Name:" Padding="4,0,4,0"/>
-            <Label Text="KBP-123.1" TextColor="Yellow" WidthRequest="96"/>
-            <Label Text="Planet:" Padding="0,0,4,0"/>
-            <Label Text="Barren" TextColor="Yellow" WidthRequest="96"/>
-            <Label Text="Distance:" Padding="0,0,4,0"/>
-            <Label Text=".6 AU" TextColor="Green" WidthRequest="96"/>
-
-         </HorizontalStackLayout>
-
-      </Grid>
-
-      <Grid x:Name="AsteroidFieldsTable"
-            Grid.Column="0"
-            Grid.Row="2">
-      </Grid>-->

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Senet.Views.Controls.DataWithLabel"
+             x:Key="DataWithLabelTemplate">
+   <HorizontalStackLayout BindingContext="{Binding Source={RelativeSource TemplatedParent}}">
+      <Label x:Name="DataLabel"
+             Text="{Binding DataLabel}"
+             FontAttributes="Bold"
+             Padding="0,0,4,0"/>
+      <Label x:Name="ValueLabel"
+             Text="{Binding DataValue}"/>
+   </HorizontalStackLayout>
+</ContentView>
