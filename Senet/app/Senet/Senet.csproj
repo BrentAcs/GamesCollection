@@ -56,6 +56,9 @@
    </ItemGroup>
 
    <ItemGroup>
+     <MauiXaml Update="Views\Children\PlanetarySystemInfoView.xaml">
+       <Generator>MSBuild:Compile</Generator>
+     </MauiXaml>
      <MauiXaml Update="Views\GameBoardTileView.xaml">
        <Generator>MSBuild:Compile</Generator>
      </MauiXaml>

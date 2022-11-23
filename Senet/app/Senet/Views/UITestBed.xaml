@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:Senet.Views.Templates"
+             xmlns:children="clr-namespace:Senet.Views.Children"
              x:Class="Senet.Views.UITestBed"
              Title="UITestBed">
-   <Grid ColumnDefinitions="*"
-         RowDefinitions="24,*,*">
-      <!--
-         SatelliteSystems (plants)
-         AsteroidFields
-      -->
 
-      <HorizontalStackLayout Grid.Column="0"
-                             Grid.Row="0"
-                             Grid.ColumnSpan="2"
-                             BackgroundColor="Black">
-         <Label Text="Name:" Padding="4,0,4,0"/>
-         <Label Text="KBP-123" TextColor="Yellow" WidthRequest="96"/>
-         <Label Text="Star:" Padding="0,0,4,0"/>
-         <Label Text="Red-Dwarf" TextColor="Yellow" WidthRequest="96"/>
-         <Label Text="Location:" Padding="0,0,4,0"/>
-         <Label Text="[ 10,10,10 ]" TextColor="Green" WidthRequest="96"/>
+   <children:PlanetarySystemInfoView />
 
-      </HorizontalStackLayout>
+</ContentPage>
 
-      <!-- 
+
+<!--<Frame Grid.Column="0"
+             Grid.Row="2"
+             BackgroundColor="DarkGray">
+         <Label Text="Boobs!"></Label>
+      </Frame>-->
+
+<!-- 
       Name
       Location
       Distance
@@ -32,7 +26,7 @@
       ** Stations
       -->
 
-      <Grid x:Name="SatelliteSystemsTable"
+<!--<Grid x:Name="SatelliteSystemsTable"
             Grid.Column="0"
             Grid.Row="1"
             ColumnDefinitions="*"
@@ -41,9 +35,6 @@
                                 Grid.Row="0"
                                 Grid.ColumnSpan="2"
                                 BackgroundColor="Black">
-            <!--<HorizontalStackLayout.GestureRecognizers>
-               <TapGestureRecognizer Tapped="TapGestureRecognizer_OnTapped"/>
-            </HorizontalStackLayout.GestureRecognizers>-->
             <Label x:Name="CollapseSatelliteSystemsLabel"
                    Text="[+]" 
                    TextColor="White"
@@ -62,7 +53,4 @@
       <Grid x:Name="AsteroidFieldsTable"
             Grid.Column="0"
             Grid.Row="2">
-      </Grid>
-
-   </Grid>
-</ContentPage>
+      </Grid>-->
