@@ -59,9 +59,16 @@
      <MauiXaml Update="Views\GameBoardTileView.xaml">
        <Generator>MSBuild:Compile</Generator>
      </MauiXaml>
+     <MauiXaml Update="Views\Templates\PlanetarySystemHeaderView.xaml">
+       <Generator>MSBuild:Compile</Generator>
+     </MauiXaml>
      <MauiXaml Update="Views\UITestBed.xaml">
        <Generator>MSBuild:Compile</Generator>
      </MauiXaml>
+   </ItemGroup>
+
+   <ItemGroup>
+     <Folder Include="Views\NewFolder\" />
    </ItemGroup>
 
 </Project>

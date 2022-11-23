@@ -9,6 +9,6 @@ public partial class UITestBed : ContentPage
 
    private void TapGestureRecognizer_OnTapped(object sender, TappedEventArgs e)
    {
-      CollapseLabel.Text = (CollapseLabel.Text == "[+]") ? "[-]" : "[+]";
+      //CollapseLabel.Text = (CollapseLabel.Text == "[+]") ? "[-]" : "[+]";
    }
 }
