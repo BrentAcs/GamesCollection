@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 using Senet.ViewModels;
 
 namespace Senet;
@@ -10,6 +11,7 @@ public static class MauiProgram
       var builder = MauiApp.CreateBuilder();
       builder
          .UseMauiApp<App>()
+         // .UseMauiCommunityToolkit()
          .ConfigureFonts(fonts =>
          {
             fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -36,6 +38,7 @@ public static class MauiProgram
    public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder builder)
    {
       builder.Services.AddSingleton<GameBoardViewModel>();
+      builder.Services.AddSingleton<ClockViewModel>();
       
       return builder;
    }

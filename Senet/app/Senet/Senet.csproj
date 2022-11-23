@@ -50,12 +50,16 @@
    </ItemGroup>
 
    <ItemGroup>
+      <PackageReference Include="CommunityToolkit.Maui" Version="3.0.0" />
       <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
       <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
    </ItemGroup>
 
    <ItemGroup>
      <MauiXaml Update="Views\GameBoardTileView.xaml">
+       <Generator>MSBuild:Compile</Generator>
+     </MauiXaml>
+     <MauiXaml Update="Views\UITestBed.xaml">
        <Generator>MSBuild:Compile</Generator>
      </MauiXaml>
    </ItemGroup>

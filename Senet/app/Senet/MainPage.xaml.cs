@@ -8,8 +8,9 @@ public partial class MainPage : ContentPage
 {
    private readonly GameBoardViewModel _boardViewModel;
 
-   public MainPage(GameBoardViewModel boardViewModel)
+   public MainPage(GameBoardViewModel boardViewModel, ClockViewModel clockViewModel)
    {
+      BindingContext = clockViewModel;
       _boardViewModel = boardViewModel;
       InitializeComponent();
    }
@@ -20,29 +21,6 @@ public partial class MainPage : ContentPage
 
       foreach (var tile in _boardViewModel.Tiles)
       {
-         // var label = new Label
-         // {
-         //    BindingContext = tile,
-         //    BackgroundColor = tile.BackgroundColor,
-         //    TextColor = Colors.Black
-         // };
-         // label.SetBinding(Label.TextProperty, "Index");
-         //
-         // var image = new Image
-         // {
-         //    HeightRequest = 32,
-         //    WidthRequest = 32,
-         //    Source = ImageSource.FromFile("dotnet_bot.png"),
-         //    ZIndex = 1
-         // };
-         //
-         // var content = new HorizontalStackLayout()
-         // {
-         //    Padding = 4,
-         //    //Content = label
-         // };
-         // content.Children.Add(label);
-         // content.Children.Add(image);
          var content = new GameBoardTileView
          {
             TileIndex = $"{tile.Index}",
